@@ -1,5 +1,5 @@
 {
-  "name": "codegreencreative/infusionsoft-socialite",
+  "name": "upwebdesign/infusionsoft-socialite",
   "description": "Infusionsoft OAuth2 Provider for Laravel Socialite",
   "type": "plugin",
   "require": {
@@ -16,7 +16,7 @@
   "authors": [
     {
       "name": "Jesse Vista",
-      "email": "jesse@codegreencreative.com"
+      "email": "jesse@upwebdesign.com"
     }
   ],
   "minimum-stability": "dev"
