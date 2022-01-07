@@ -3,7 +3,7 @@
 ## Installation & Basic Usage
 
 ```bash
-composer require codegreencreative/infusionsoft-socialite
+composer require upwebdesign/infusionsoft-socialite
 ```
 
 ### Add configuration to `config/services.php`
@@ -24,9 +24,9 @@ Add the event to your `listen[]` array in `app/Providers/EventServiceProvider`.
 
 ```php
 protected $listen = [
-    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-        // ... other providers
-        \Codegreencreative\InfusionsoftSocialite\InfusionsoftExtendSocialite::class.'@handle',
+      \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+      // ... other providers
+      \InfusionsoftSocialite\InfusionsoftExtendSocialite::class.'@handle',
     ],
 ];
 ```
