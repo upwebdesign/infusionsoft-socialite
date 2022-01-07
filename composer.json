@@ -1,0 +1,23 @@
+{
+  "name": "codegreencreative/infusionsoft-socialite",
+  "description": "Infusionsoft OAuth2 Provider for Laravel Socialite",
+  "type": "plugin",
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "socialiteproviders/manager": "~4.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      " InfusionsoftSocialite\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jesse Vista",
+      "email": "jesse@codegreencreative.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
