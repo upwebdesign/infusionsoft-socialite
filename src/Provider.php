@@ -2,6 +2,7 @@
 
 namespace InfusionsoftSocialite;
 
+use Illuminate\Support\Arr;
 use SocialiteProviders\Manager\OAuth2\User;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 
@@ -10,7 +11,7 @@ class Provider extends AbstractProvider
     /**
      * Unique Provider Identifier.
      */
-    const IDENTIFIER = 'INFUSIONSOFT';
+    public const IDENTIFIER = 'INFUSIONSOFT';
 
     /**
      * {@inheritdoc}
