@@ -3,10 +3,10 @@
   "description": "Infusionsoft OAuth2 Provider for Laravel Socialite",
   "type": "plugin",
   "require": {
-    "php": ">=7.4",
+    "php": "^7.4|^8.0",
     "ext-json": "*",
-    "laravel/framework": ">=6.0",
-    "laravel/socialite": ">=5"
+    "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+    "laravel/socialite": "^5.0|6.0"
   },
   "license": "MIT",
   "autoload": {
