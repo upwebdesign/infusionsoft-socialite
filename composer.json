@@ -5,12 +5,20 @@
   "require": {
     "php": ">=7.4",
     "ext-json": "*",
-    "socialiteproviders/manager": "~4.0"
+    "laravel/framework": ">=6.0",
+    "laravel/socialite": ">=5"
   },
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      " InfusionsoftSocialite\\": "src/"
+      "InfusionsoftSocialite\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "InfusionsoftSocialite\\InfusionsoftSocialiteServiceProvider"
+      ]
     }
   },
   "authors": [

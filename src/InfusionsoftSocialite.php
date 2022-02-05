@@ -3,16 +3,12 @@
 namespace InfusionsoftSocialite;
 
 use Illuminate\Support\Arr;
-use SocialiteProviders\Manager\OAuth2\User;
-use SocialiteProviders\Manager\OAuth2\AbstractProvider;
+use Laravel\Socialite\Two\User;
+use Laravel\Socialite\Two\AbstractProvider;
+use Laravel\Socialite\Two\ProviderInterface;
 
-class Provider extends AbstractProvider
+class InfusionsoftSocialite extends AbstractProvider implements ProviderInterface
 {
-    /**
-     * Unique Provider Identifier.
-     */
-    public const IDENTIFIER = 'INFUSIONSOFT';
-
     /**
      * {@inheritdoc}
      */
@@ -21,7 +17,7 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected function getAuthUrl($state)
+    public function getAuthUrl($state): string
     {
         return $this->buildAuthUrlFromBase('https://accounts.infusionsoft.com/app/oauth/authorize', $state);
     }
@@ -39,7 +35,7 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected function getTokenUrl()
+    protected function getTokenUrl(): string
     {
         return 'https://api.infusionsoft.com/token';
     }
@@ -47,7 +43,7 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected function getUserByToken($token)
+    protected function getUserByToken($token): array
     {
         $userUrl = 'https://api.infusionsoft.com/crm/rest/account/profile';
 
@@ -59,7 +55,7 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected function mapUserToObject(array $user)
+    protected function mapUserToObject(array $user): User
     {
         return (new User())->setRaw($user)->map([
             'id' => null,
@@ -76,7 +72,7 @@ class Provider extends AbstractProvider
      * @param  string  $token
      * @return array
      */
-    protected function getRequestOptions($token)
+    protected function getRequestOptions($token): array
     {
         return [
             'headers' => [
